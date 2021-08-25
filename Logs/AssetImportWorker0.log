@@ -1130,3 +1130,4 @@ Received Import Request.
 Start importing Assets/Scripts/ControllerEscena.cs using Guid(1b5ca14cabca5e74782b17f7ab1603d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26a3f539ea85e5b1f02db25ca7c5b862') in 0.004903 seconds 
   Import took 0.008591 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
