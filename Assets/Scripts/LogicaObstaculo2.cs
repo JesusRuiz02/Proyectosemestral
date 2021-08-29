@@ -29,15 +29,17 @@ public class LogicaObstaculo2 : MonoBehaviour
 
     private void Lifelost()
     {
+        life--;
         Debug.Log("Lost a life");
         Debug.Log(life);
-        life--;
+        
         if (life == 0)
         {
             Debug.Log("Perdiste");
         }
-    
+
         
+
     }
 
 }
