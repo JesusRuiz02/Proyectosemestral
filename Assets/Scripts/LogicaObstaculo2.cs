@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LogicaObstaculo2 : MonoBehaviour
 {
-    public int life = 3;
+   
     public ControllerScene controllerScene;
     public float velocidad = 3f;
     // Start is called before the first frame update
@@ -19,27 +19,10 @@ public class LogicaObstaculo2 : MonoBehaviour
     {
         transform.position += Vector3.down * velocidad * Time.deltaTime;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+    public void destroy()
     {
-        if (collision.CompareTag("Player"))
-        {
-           Lifelost();
-        }
+        Destroy(this.gameObject);
     }
-
-    private void Lifelost()
-    {
-        life--;
-        Debug.Log("Lost a life");
-        Debug.Log(life);
-        
-        if (life == 0)
-        {
-            Debug.Log("Perdiste");
-        }
-
-        
-
-    }
-
 }

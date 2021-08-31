@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 512904054474133598}
   - component: {fileID: 2020451852066945015}
   - component: {fileID: -7851363851482667665}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Asteroide 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300032, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb656a12f89201c43ba443b21d26b36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerScene: {fileID: 0}
   velocidad: 3
 --- !u!61 &-7851363851482667665
 BoxCollider2D:
@@ -107,7 +108,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
