@@ -1,10 +1,14 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
     public int life=3;
+    public GameObject gameOverText;
+    public GameObject bottonReset;
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ProcessCollision(collision.gameObject);
@@ -36,6 +40,9 @@ public class PlayerCollision : MonoBehaviour
         if (life==0)
         {
             Debug.Log("Perdiste");
+            gameOverText.SetActive(true);
+            bottonReset.SetActive(true);
+            Time.timeScale = 0;     
         }
     }
 
