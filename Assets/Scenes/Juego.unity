@@ -396,7 +396,7 @@ MonoBehaviour:
   Maxtime: 5
   initialtime: 0
   Obstacle: {fileID: 7558108300922099958, guid: bc159e060c45cff41bcd1a22d95a9b23, type: 3}
-  range: 2.5
+  range: 3
 --- !u!4 &670214187
 Transform:
   m_ObjectHideFlags: 0
@@ -554,6 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a457a697a6ea5749bfbd39e1122c4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalinput: 0
 --- !u!61 &760776672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -937,7 +938,7 @@ MonoBehaviour:
   Maxtime: 5
   initialtime: 0
   Obstacle: {fileID: 4939219038207454004, guid: 02b2c669e06ecaf409861d820c927a7c, type: 3}
-  range: 2.5
+  range: 3
 --- !u!4 &1125708547
 Transform:
   m_ObjectHideFlags: 0
@@ -1547,7 +1548,7 @@ MonoBehaviour:
   Maxtime: 5
   initialtime: 0
   Obstacle: {fileID: 897156697533648507, guid: 264729cc79ef60443967dbe55a38893c, type: 3}
-  range: 2.5
+  range: 3
 --- !u!4 &1915302631
 Transform:
   m_ObjectHideFlags: 0
