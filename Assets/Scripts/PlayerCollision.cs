@@ -1,12 +1,16 @@
  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
     public int life=3;
     public GameObject gameOverText;
     public GameObject bottonReset;
+    
+    public int score = 0;
+    public Text scoreText;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +31,8 @@ public class PlayerCollision : MonoBehaviour
         if (collider.CompareTag("Points"))
         {
             scorepoint();
-            
+            score++;
+            scoreText.text = "Score: " + score;
         }
                 
     }
@@ -49,7 +54,10 @@ public class PlayerCollision : MonoBehaviour
     private void scorepoint()
     {
         Debug.Log("You score a point");
-        
+
+        score++;
+        scoreText.text = "Score: " + score;
+
     }
 }
     
