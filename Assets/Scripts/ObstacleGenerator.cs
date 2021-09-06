@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class ObstacleGenerator : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float Maxtime = 1f;
+    private float Maxtime = 2f;
     public float initialtime = 0f;
     public GameObject Obstacle;
     public float range;
+    public GameObject score;
+    //public int Score=0;
     
     void Start()
     {
@@ -20,6 +22,8 @@ public class ObstacleGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
         if (initialtime>Maxtime)
         {
             GameObject NewObstacle = Instantiate(Obstacle);
@@ -37,4 +41,22 @@ public class ObstacleGenerator : MonoBehaviour
 
 
     }
+
+    public void SpeedSpawn()
+    {
+        Debug.Log("más rápido");
+
+        if (Maxtime > 0)
+        {
+            Maxtime = Maxtime - 1;
+        }
+        else
+        {
+            Maxtime = 1;
+        }
+
+        Maxtime = Maxtime--;
+        
+    }
 }
+

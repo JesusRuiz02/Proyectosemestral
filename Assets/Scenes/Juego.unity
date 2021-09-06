@@ -195,7 +195,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16, y: 12}
+    oldSize: {x: 7, y: 12.44}
     newSize: {x: 16, y: 12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 918339b9e6ae7d64aaaee8e3c656300c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1a8211c348ecb140b8463d8da34c16f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -262,9 +262,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35478961}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.62, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.32, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 734158346}
   m_RootOrder: 0
@@ -393,10 +393,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ecb3a536dfa3646acfcb32844891be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maxtime: 5
   initialtime: 0
   Obstacle: {fileID: 7558108300922099958, guid: bc159e060c45cff41bcd1a22d95a9b23, type: 3}
   range: 3
+  score: {fileID: 0}
 --- !u!4 &670214187
 Transform:
   m_ObjectHideFlags: 0
@@ -597,7 +597,9 @@ MonoBehaviour:
   gameOverText: {fileID: 1294427001}
   bottonReset: {fileID: 1905438006}
   score: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1087893763}
+  SpeedSpawn: {fileID: 0}
+  obstaclegenerator: {fileID: 0}
 --- !u!1 &797464590
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1023657748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,10 +695,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ecb3a536dfa3646acfcb32844891be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maxtime: 15
   initialtime: 0
   Obstacle: {fileID: 1785717574218899442, guid: 87a4118b18e486d45a7fd4e69f8a659d, type: 3}
   range: 2
+  score: {fileID: 0}
 --- !u!4 &1023657749
 Transform:
   m_ObjectHideFlags: 0
@@ -831,7 +833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1087893762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -848,7 +850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.9, y: -54}
+  m_AnchoredPosition: {x: 1.9, y: -136.94}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1087893763
@@ -937,10 +939,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ecb3a536dfa3646acfcb32844891be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maxtime: 5
   initialtime: 0
   Obstacle: {fileID: 4939219038207454004, guid: 02b2c669e06ecaf409861d820c927a7c, type: 3}
   range: 3
+  score: {fileID: 0}
 --- !u!4 &1125708547
 Transform:
   m_ObjectHideFlags: 0
@@ -1121,13 +1123,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758298650}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.62, y: 12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.32, y: 12, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 734158346}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1758298652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,7 +1181,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16, y: 12}
+    oldSize: {x: 7, y: 12.44}
     newSize: {x: 16, y: 12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1228,7 +1230,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 918339b9e6ae7d64aaaee8e3c656300c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1a8211c348ecb140b8463d8da34c16f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1547,10 +1549,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ecb3a536dfa3646acfcb32844891be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maxtime: 5
   initialtime: 0
   Obstacle: {fileID: 897156697533648507, guid: 264729cc79ef60443967dbe55a38893c, type: 3}
   range: 3
+  score: {fileID: 0}
 --- !u!4 &1915302631
 Transform:
   m_ObjectHideFlags: 0

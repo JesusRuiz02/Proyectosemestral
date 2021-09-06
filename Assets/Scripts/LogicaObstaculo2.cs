@@ -7,7 +7,7 @@ public class LogicaObstaculo2 : MonoBehaviour
 {
    
     public ControllerScene controllerScene;
-    public float velocidad = 3f;
+    public float velocidad = 4f;
     // Start is called before the first frame update
     void Start()
     {

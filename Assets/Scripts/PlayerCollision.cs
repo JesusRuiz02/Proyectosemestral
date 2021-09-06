@@ -1,3 +1,4 @@
+ using System;
  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,25 @@ using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
+    
+    
     public int life=3;
     public GameObject gameOverText;
     public GameObject bottonReset;
-    
-    public int score = 0;
+    public float score = 0;
     public Text scoreText;
+    public GameObject SpeedSpawn;
+    public ObstacleGenerator obstaclegenerator;
 
+    void start()
+    {
+        obstaclegenerator = FindObjectOfType<ObstacleGenerator>();
+    }
+    private void Update()
+    {
+       scoretimer();
+       //Debug.Log(score);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,7 +43,7 @@ public class PlayerCollision : MonoBehaviour
         
         if (collider.CompareTag("Points"))
         {
-            scorepoint();
+            scorepointbonus();
             score++;
             scoreText.text = "Score: " + score;
         }
@@ -40,8 +53,7 @@ public class PlayerCollision : MonoBehaviour
     {
             
         Debug.Log("Lost a life");
-        life --;
-        Debug.Log(life);
+        life--;
         if (life==0)
         {
             Debug.Log("Perdiste");
@@ -51,7 +63,7 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-    private void scorepoint()
+    private void scorepointbonus()
     {
         Debug.Log("You score a point");
 
@@ -59,6 +71,19 @@ public class PlayerCollision : MonoBehaviour
         scoreText.text = "Score: " + score;
 
     }
+
+    private void scoretimer()
+    {
+        score = score + 1 * Time.deltaTime;
+        scoreText.text = "Time: " + score;
+        //if (score >= 3)
+        //{
+           // obstaclegenerator.SpeedSpawn();
+       // }
+
+    }
+
+
 }
     
 
