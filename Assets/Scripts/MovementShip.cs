@@ -12,6 +12,11 @@ public class MovementShip : MonoBehaviour
     private Rigidbody2D _rb;
     private float _dirX;
     private const float  MoveSpeed= 20f;
+
+    public GameObject leftWall;
+    public GameObject rigthWall;
+
+ 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -25,6 +30,16 @@ public class MovementShip : MonoBehaviour
         _dirX = Input.acceleration.x * MoveSpeed;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -7.5f, 7.5f), transform.position.y);
         this.transform.Translate(MoveSpeed*Time.deltaTime*Vector3.right*horizontalinput);
+        Debug.Log(transform.position.x);
+
+        if(transform.position.x < leftWall.transform.position.x)
+        {
+            transform.position=new Vector3(leftWall.transform.position.x, transform.position.y, 0);
+        }
+        if(transform.position.x > rigthWall.transform.position.x)
+        {
+            transform.position = new Vector3(rigthWall.transform.position.x, transform.position.y, 0);
+        }
     }
 
     private void FixedUpdate() 
