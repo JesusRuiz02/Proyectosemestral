@@ -11,6 +11,7 @@ public class PlayerCollision : MonoBehaviour
     public int life=3;
     public GameObject gameOverText;
     public GameObject bottonReset;
+    public GameObject bottonMenu;
     public float score = 0;
     public Text scoreText;
     public GameObject SpeedSpawn;
@@ -59,6 +60,7 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log("Perdiste");
             gameOverText.SetActive(true);
             bottonReset.SetActive(true);
+            bottonMenu.SetActive(true);
             Time.timeScale = 0;     
         }
     }
