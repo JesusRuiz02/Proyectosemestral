@@ -36,7 +36,11 @@ public static class LoadSaveManager
         }
         else
         {
-            playerSettings = new PlayerSettings() {IsFxActive = true, IsmusicActive = true};
+            TextAsset file=Resources.Load("player_settings") as TextAsset;
+            if (file!= null)
+            {
+                Debug.LogError("File doesn´t exist");
+            }
         }
 
         return playerSettings;

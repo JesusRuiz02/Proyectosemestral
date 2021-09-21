@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ControllerScene : MonoBehaviour
 {
     private PlayerSettings playerSettings;
-    private AudioSource _audioSource;
+    public AudioSource audioSource;
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -26,15 +26,21 @@ public class ControllerScene : MonoBehaviour
         playerSettings.IsFxActive = false;
     }
 
+    private void Start()
+    {
+        playerSettings = new PlayerSettings();
+       
+    }
+
     private void Update()
     {
         if (playerSettings.IsmusicActive==false)
         {
-            _audioSource.volume=0;
+            audioSource.volume=0;
         }
         else
         {
-            _audioSource.volume = 1;
+            audioSource.volume = 1;
         }
         
         
