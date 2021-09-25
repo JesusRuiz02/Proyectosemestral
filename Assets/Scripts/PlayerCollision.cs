@@ -3,19 +3,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+ using Object = UnityEngine.Object;
 
-public class PlayerCollision : MonoBehaviour
+ public class PlayerCollision : MonoBehaviour
 {
     
     
-    public int life=3;
+    public int life=3, Limitscore=10;
     public GameObject gameOverText;
     public GameObject bottonReset;
     public GameObject bottonMenu;
     public float score = 0;
     public Text scoreText;
-    public GameObject SpeedSpawn;
     public ObstacleGenerator obstaclegenerator;
+    public ObstacleGenerator ObstacleGenerator2;
+    public ObstacleGenerator ObstacleGenerator3;
 
     void start()
     {
@@ -73,15 +75,23 @@ public class PlayerCollision : MonoBehaviour
         scoreText.text = "Score: " + score;
 
     }
+    
 
     private void scoretimer()
     {
-        score = score + 1 * Time.deltaTime;
+        score = score + .001f * Time.time;
         scoreText.text = "Time: " + score;
-        //if (score >= 3)
-        //{
-           // obstaclegenerator.SpeedSpawn();
-       // }
+        if (score >= Limitscore)
+        {
+            if (obstaclegenerator.speedspawn>=0.5)
+            {
+                obstaclegenerator.GetDifficult();
+                ObstacleGenerator2.GetDifficult();
+                ObstacleGenerator3.GetDifficult();  
+            }
+            
+            Limitscore = Limitscore + 10;
+        }
 
     }
 

@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 35478963}
   - component: {fileID: 35478967}
   - component: {fileID: 35478962}
+  - component: {fileID: 35478964}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -177,6 +178,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &35478964
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35478961}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7, y: 12.44}
+    newSize: {x: 16, y: 12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7, y: 12.44}
+  m_EdgeRadius: 0
 --- !u!212 &35478965
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -368,10 +395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ecb3a536dfa3646acfcb32844891be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialtime: 0
   Obstacle: {fileID: 7558108300922099958, guid: bc159e060c45cff41bcd1a22d95a9b23, type: 3}
-  range: 3
-  score: {fileID: 0}
+  speedspawn: 3
 --- !u!4 &670214187
 Transform:
   m_ObjectHideFlags: 0
@@ -571,13 +596,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  Limitscore: 3
   gameOverText: {fileID: 1294427001}
   bottonReset: {fileID: 1905438006}
   bottonMenu: {fileID: 2008618871}
   score: 0
   scoreText: {fileID: 1087893763}
-  SpeedSpawn: {fileID: 0}
-  obstaclegenerator: {fileID: 0}
+  obstaclegenerator: {fileID: 670214186}
+  ObstacleGenerator2: {fileID: 1915302630}
+  ObstacleGenerator3: {fileID: 0}
 --- !u!70 &760776674
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -853,10 +880,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ecb3a536dfa3646acfcb32844891be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialtime: 0
   Obstacle: {fileID: 1785717574218899442, guid: 87a4118b18e486d45a7fd4e69f8a659d, type: 3}
-  range: 2
-  score: {fileID: 0}
+  speedspawn: 3
 --- !u!4 &1023657749
 Transform:
   m_ObjectHideFlags: 0
@@ -1098,10 +1123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ecb3a536dfa3646acfcb32844891be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialtime: 0
-  Obstacle: {fileID: 4939219038207454004, guid: 02b2c669e06ecaf409861d820c927a7c, type: 3}
-  range: 3
-  score: {fileID: 0}
+  Obstacle: {fileID: 7558108300922099958, guid: bc159e060c45cff41bcd1a22d95a9b23, type: 3}
+  speedspawn: 3
 --- !u!4 &1125708547
 Transform:
   m_ObjectHideFlags: 0
@@ -1865,10 +1888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ecb3a536dfa3646acfcb32844891be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialtime: 0
-  Obstacle: {fileID: 897156697533648507, guid: 264729cc79ef60443967dbe55a38893c, type: 3}
-  range: 3
-  score: {fileID: 0}
+  Obstacle: {fileID: 7558108300922099958, guid: bc159e060c45cff41bcd1a22d95a9b23, type: 3}
+  speedspawn: 3
 --- !u!4 &1915302631
 Transform:
   m_ObjectHideFlags: 0

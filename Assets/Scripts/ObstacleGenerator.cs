@@ -6,17 +6,14 @@ using UnityEngine;
 public class ObstacleGenerator : MonoBehaviour
 {
     // Start is called before the first frame update
-
-    private float Maxtime = 2f;
-    public float initialtime = 0f;
+    
     public GameObject Obstacle;
-    public float range;
-    public GameObject score;
-    //public int Score=0;
+    public float speedspawn = 3f;
+
     
     void Start()
     {
-        
+        RepeatEnemyBasic();
     }
 
     // Update is called once per frame
@@ -24,39 +21,32 @@ public class ObstacleGenerator : MonoBehaviour
     {
         
         
-        if (initialtime>Maxtime)
-        {
-            GameObject NewObstacle = Instantiate(Obstacle);
-            NewObstacle.transform.position = transform.position + new Vector3(Random.Range(-range, range), 0);
-            Destroy(gameObject,40);
-            initialtime = 0;
-
-        }
-        else
-        {
-            initialtime += Time.deltaTime;
-        }
-
+        
 
 
 
     }
 
-    public void SpeedSpawn()
+    
+
+    void CreateEnemy()
     {
-        Debug.Log("más rápido");
+        Instantiate(Obstacle, transform.position, Quaternion.identity);
+    }
 
-        if (Maxtime > 0)
-        {
-            Maxtime = Maxtime - 1;
-        }
-        else
-        {
-            Maxtime = 1;
-        }
+    void RepeatEnemyBasic()
+    {
+        InvokeRepeating("CreateEnemy",0f,speedspawn);
+    }
 
-        Maxtime = Maxtime--;
-        
+    void StopSpawn()
+    {
+        CancelInvoke("CreateEnemy");
+    }
+
+     public void GetDifficult()
+    {
+        speedspawn = speedspawn - 0.3f;
     }
 }
 
