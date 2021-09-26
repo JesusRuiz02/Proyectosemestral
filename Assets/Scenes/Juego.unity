@@ -555,6 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalinput: 0
+  verticalinput: 0
   leftWall: {fileID: 1248282200}
   rigthWall: {fileID: 908435385}
 --- !u!61 &760776672
@@ -596,7 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
-  Limitscore: 3
+  Limitscore: 5
   gameOverText: {fileID: 1294427001}
   bottonReset: {fileID: 1905438006}
   bottonMenu: {fileID: 2008618871}
@@ -604,7 +605,7 @@ MonoBehaviour:
   scoreText: {fileID: 1087893763}
   obstaclegenerator: {fileID: 670214186}
   ObstacleGenerator2: {fileID: 1915302630}
-  ObstacleGenerator3: {fileID: 0}
+  ObstacleGenerator3: {fileID: 1125708546}
 --- !u!70 &760776674
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

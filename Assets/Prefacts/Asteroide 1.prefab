@@ -123,4 +123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerScene: {fileID: 0}
-  velocidad: 3
+  velocidad: 4

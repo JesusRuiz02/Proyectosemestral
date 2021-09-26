@@ -9,8 +9,9 @@ public class MovementShip : MonoBehaviour
 {
     // Start is called before the first frame update
     public float horizontalinput;
+    public float verticalinput;
     private Rigidbody2D _rb;
-    private float _dirX;
+    private float _dirX,_dirY;
     private const float  MoveSpeed= 20f;
 
     public GameObject leftWall;
@@ -27,10 +28,13 @@ public class MovementShip : MonoBehaviour
     void Update()
     {
         horizontalinput = Input.GetAxis("Horizontal");
+        verticalinput = Input.GetAxis("Vertical");
         _dirX = Input.acceleration.x * MoveSpeed;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -7.5f, 7.5f), transform.position.y);
+        _dirY = Input.acceleration.y * MoveSpeed;
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -7.5f, 7.5f), Mathf.Clamp(transform.position.y, -3f, 3f));
         this.transform.Translate(MoveSpeed*Time.deltaTime*Vector3.right*horizontalinput);
-        Debug.Log(transform.position.x);
+        this.transform.Translate(MoveSpeed*Time.deltaTime*Vector3.up*verticalinput);
+       
 
         if(transform.position.x < leftWall.transform.position.x)
         {
@@ -44,7 +48,7 @@ public class MovementShip : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        _rb.velocity = new Vector2(_dirX, 0f);
+        _rb.velocity = new Vector2(_dirX, _dirY);
     }
     
     }
