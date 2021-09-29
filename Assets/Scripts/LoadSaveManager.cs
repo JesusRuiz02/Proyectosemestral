@@ -37,7 +37,7 @@ public static class LoadSaveManager
         else
         {
             TextAsset file=Resources.Load("player_settings") as TextAsset;
-            if (file!= null)
+            if (file== null)
             {
                 Debug.LogError("File doesn´t exist");
             }
