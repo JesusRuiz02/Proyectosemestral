@@ -13,6 +13,7 @@ using UnityEngine.UI;
     public GameObject gameOverText;
     public GameObject bottonReset;
     public GameObject bottonMenu;
+    public GameObject botonPause;
     public float score = 0;
     public Text scoreText;
     public ObstacleGenerator obstaclegenerator;
@@ -63,6 +64,7 @@ using UnityEngine.UI;
             gameOverText.SetActive(true);
             bottonReset.SetActive(true);
             bottonMenu.SetActive(true);
+            botonPause.SetActive(false);
             Time.timeScale = 0;     
         }
     }
