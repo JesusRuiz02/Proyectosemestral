@@ -7,9 +7,9 @@ using UnityEngine.UI;
  using Object = UnityEngine.Object;
 
  public class PlayerCollision : MonoBehaviour
-{
-    
-    
+ {
+
+     public Animator ac;
     public int life=3, Limitscore=10;
     public GameObject gameOverText;
     public GameObject bottonReset;
@@ -61,11 +61,13 @@ using UnityEngine.UI;
         life--;
         if (life==0)
         {
+            ac.SetBool("DED", true);
             Debug.Log("Perdiste");
             gameOverText.SetActive(true);
             bottonReset.SetActive(true);
             bottonMenu.SetActive(true);
-            Time.timeScale = 0;     
+            Time.timeScale = 0; 
+            
         }
     }
 
