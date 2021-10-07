@@ -36,7 +36,7 @@ public class ControllerScene : MonoBehaviour
 
     }
 
-    private void Update()
+    void Update()
     {
         if (playerSettings.IsmusicActive==false)
         {

@@ -504,9 +504,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1867341873}
-        m_TargetAssemblyTypeName: ControllerScene, Assembly-CSharp
-        m_MethodName: volumeoff
+      - m_Target: {fileID: 2108930401}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -771,9 +771,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1867341873}
-        m_TargetAssemblyTypeName: ControllerScene, Assembly-CSharp
-        m_MethodName: volumeon
+      - m_Target: {fileID: 2108930401}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
