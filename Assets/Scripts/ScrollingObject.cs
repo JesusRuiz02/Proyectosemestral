@@ -7,6 +7,7 @@ public class ScrollingObject : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     public float scrollspeed = -1.5f;
+    
 
     private void Awake()
     {
@@ -17,6 +18,9 @@ public class ScrollingObject : MonoBehaviour
     {
         rb2d.velocity = new Vector2(0, scrollspeed);
     }
+
+   
+
 
     // Update is called once per frame
     void Update()

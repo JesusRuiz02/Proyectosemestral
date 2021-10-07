@@ -19,6 +19,10 @@ using UnityEngine.UI;
     public ObstacleGenerator obstaclegenerator;
     public ObstacleGenerator ObstacleGenerator2;
     public ObstacleGenerator ObstacleGenerator3;
+    public AudioSource NaveSound;
+    public GameObject Nave;
+    
+    
 
     void Start()
     {
@@ -34,6 +38,8 @@ using UnityEngine.UI;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ProcessCollision(collision.gameObject);
+        
+        
     }
        
     private void ProcessCollision(GameObject collider)
@@ -52,8 +58,13 @@ using UnityEngine.UI;
             score++;
             scoreText.text = "Score: " + score;
         }
-                
+         
     }
+
+    
+    
+
+    
     private void LostLife()
     {
             
@@ -61,16 +72,28 @@ using UnityEngine.UI;
         life--;
         if (life==0)
         {
+            NaveSound = GetComponent<AudioSource>();
             ac.SetBool("DED", true);
+            NaveSound.Play(0);
             Debug.Log("Perdiste");
-            gameOverText.SetActive(true);
+            gameOverText.SetActive(true);   
             bottonReset.SetActive(true);
             bottonMenu.SetActive(true);
-            Time.timeScale = 0; 
+            Destroy(Nave, 3);  
+            
+               
             
         }
+
+        
+        
+
+        
     }
 
+    
+
+    
     private void scorepointbonus()
     {
         Debug.Log("You score a point");
@@ -101,7 +124,11 @@ using UnityEngine.UI;
 
     }
 
-   
+
+    
+
+    
+
 }
     
 

@@ -10,6 +10,7 @@ public class ObstacleGenerator : MonoBehaviour
     public GameObject Obstacle;
     public float speedspawn = 3f;
     public GameObject Enemy2;
+   
 
     
     void Start()
@@ -20,10 +21,8 @@ public class ObstacleGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        
 
+        
 
 
     }
@@ -33,6 +32,7 @@ public class ObstacleGenerator : MonoBehaviour
    public void CreateEnemy()
     {
         Instantiate(Obstacle, transform.position, Quaternion.identity);
+        
     }
 
    //public void CreateEnemy2()
@@ -57,9 +57,12 @@ public class ObstacleGenerator : MonoBehaviour
 
      public void GetDifficult()
     {
+        
         speedspawn = speedspawn - 0.3f;
     }
-     
+
+   
+
     public void level1()
     {
         

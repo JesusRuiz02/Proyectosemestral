@@ -16,6 +16,7 @@ public class MovementShip : MonoBehaviour
 
     public GameObject leftWall;
     public GameObject rigthWall;
+    //public GameObject Naveee;
 
  
     void Start()
@@ -44,6 +45,10 @@ public class MovementShip : MonoBehaviour
         {
             transform.position = new Vector3(rigthWall.transform.position.x, transform.position.y, 0);
         }
+
+       
+            
+
     }
 
     private void FixedUpdate() 
@@ -51,6 +56,12 @@ public class MovementShip : MonoBehaviour
         _rb.velocity = new Vector2(_dirX, 0);
     }
     
-    }
+    /*public void Dead()
+    {
+        Destroy(Naveee);
+    }*/
+
+   
+}
 
   
