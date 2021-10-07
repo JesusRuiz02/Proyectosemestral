@@ -35,20 +35,20 @@ public class ObstacleGenerator : MonoBehaviour
         Instantiate(Obstacle, transform.position, Quaternion.identity);
     }
 
-   public void CreateEnemy2()
-    {
-        Instantiate(Enemy2, transform.position, Quaternion.identity);
-    }
+   //public void CreateEnemy2()
+   // {
+     //   Instantiate(Enemy2, transform.position, Quaternion.identity);
+   //}
 
    public void RepeatEnemyBasic()
     {
         InvokeRepeating("CreateEnemy",0f,speedspawn);
     }
 
-   public void RepeatEnemy2()
-    {
-        InvokeRepeating("CreateEnemy2", 0f,speedspawn);
-    }
+ //  public void RepeatEnemy2()
+  //  {
+   //     InvokeRepeating("CreateEnemy2", 0f,speedspawn);
+   // }
 
     public void StopSpawn()
     {
@@ -58,6 +58,11 @@ public class ObstacleGenerator : MonoBehaviour
      public void GetDifficult()
     {
         speedspawn = speedspawn - 0.3f;
+    }
+     
+    public void level1()
+    {
+        
     }
 }
 

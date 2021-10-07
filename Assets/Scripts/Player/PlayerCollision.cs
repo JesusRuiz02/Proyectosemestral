@@ -1,14 +1,15 @@
  using System;
  using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+ using System.Security.Cryptography.X509Certificates;
+ using UnityEngine;
 using UnityEngine.UI;
  using Object = UnityEngine.Object;
 
  public class PlayerCollision : MonoBehaviour
-{
-    
-    
+ {
+
+     public Animator ac;
     public int life=3, Limitscore=10;
     public GameObject gameOverText;
     public GameObject bottonReset;
@@ -20,9 +21,10 @@ using UnityEngine.UI;
     public ObstacleGenerator ObstacleGenerator2;
     public ObstacleGenerator ObstacleGenerator3;
 
-    void start()
+    void Start()
     {
-        obstaclegenerator = FindObjectOfType<ObstacleGenerator>();
+       
+       
     }
     private void Update()
     {
@@ -60,6 +62,7 @@ using UnityEngine.UI;
         life--;
         if (life==0)
         {
+            ac.SetBool("DED", true);
             Debug.Log("Perdiste");
             gameOverText.SetActive(true);
             bottonReset.SetActive(true);
@@ -77,37 +80,29 @@ using UnityEngine.UI;
         scoreText.text = "Score: " + score;
 
     }
-    
+
 
     private void scoretimer()
     {
         score += Time.deltaTime;
-        scoreText.text = "Score: " + Math.Round(score,0);
+        scoreText.text = "Score: " + Math.Round(score, 0);
         if (score >= Limitscore)
         {
-            if (obstaclegenerator.speedspawn>=0.5)
+            if (obstaclegenerator.speedspawn >= 0.5)
             {
                 obstaclegenerator.GetDifficult();
                 ObstacleGenerator2.GetDifficult();
-                ObstacleGenerator3.GetDifficult();  
+                ObstacleGenerator3.GetDifficult();
             }
-            
+
             Limitscore = Limitscore + 10;
         }
 
-        if (score >= 20)
-        {
-            obstaclegenerator.RepeatEnemy2();
-            ObstacleGenerator2.RepeatEnemy2();
-            ObstacleGenerator3.RepeatEnemy2();
-            obstaclegenerator.CancelInvoke();
-            ObstacleGenerator2.CancelInvoke();
-            ObstacleGenerator3.CancelInvoke();
-        }
+       
 
     }
 
-
+   
 }
     
 
