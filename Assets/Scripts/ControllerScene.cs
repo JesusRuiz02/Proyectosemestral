@@ -18,18 +18,22 @@ public class ControllerScene : MonoBehaviour
     {
         playerSettings.IsmusicActive = true;
         playerSettings.IsFxActive = true;
+        LoadSaveManager.SavedPlayerSettings(playerSettings);
     }
 
     public void volumeoff()
     {
         playerSettings.IsmusicActive = false;
         playerSettings.IsFxActive = false;
+        LoadSaveManager.SavedPlayerSettings(playerSettings);
     }
 
     private void Start()
     {
         playerSettings = new PlayerSettings();
-       
+
+        playerSettings = LoadSaveManager.LoadPlayerSettings();
+
     }
 
     private void Update()
