@@ -44,30 +44,30 @@ public class MoveTheSpawn : MonoBehaviour
 
     void Formation1()
     {
-        ObstacleGenerator.transform.position=new Vector3(0,10,0);
-        ObstacleGenerator2.transform.position= new Vector3(2,12,0); 
-        ObstacleGenerator3.transform.position= new Vector3(-2,14,0); 
+        ObstacleGenerator.transform.position=new Vector3(0,5,0);
+        ObstacleGenerator2.transform.position=new Vector3(2,7,0); 
+        ObstacleGenerator3.transform.position=new Vector3(-2,9,0); 
     }
 
     void Formation2()
     {
-        ObstacleGenerator.transform.position = new Vector3(0, 12, 0);
-        ObstacleGenerator2.transform.position = new Vector3(2, 14, 0);
-        ObstacleGenerator3.transform.position = new Vector3(-2, 10, 0);
+        ObstacleGenerator.transform.position = new Vector3(0, 7, 0);
+        ObstacleGenerator2.transform.position = new Vector3(2, 9, 0);
+        ObstacleGenerator3.transform.position = new Vector3(-2, 5, 0);
     }
 
     void Formation3()
     {
-        ObstacleGenerator.transform.position = new Vector3(0, 12, 0);
-        ObstacleGenerator2.transform.position = new Vector3(2, 10, 0);
-        ObstacleGenerator3.transform.position = new Vector3(-2, 14, 0);
+        ObstacleGenerator.transform.position = new Vector3(0, 7, 0);
+        ObstacleGenerator2.transform.position = new Vector3(2, 5, 0);
+        ObstacleGenerator3.transform.position = new Vector3(-2, 9, 0);
     }
 
     void Formation4()
     {
-        ObstacleGenerator.transform.position = new Vector3(0, 8, 0);
-        ObstacleGenerator2.transform.position = new Vector3(2, 10, 0);
-        ObstacleGenerator3.transform.position = new Vector3(-2, 10, 0);
+        ObstacleGenerator.transform.position = new Vector3(0, 5, 0);
+        ObstacleGenerator2.transform.position = new Vector3(2, 7, 0);
+        ObstacleGenerator3.transform.position = new Vector3(-2, 7, 0);
     }
 
     void Random1()

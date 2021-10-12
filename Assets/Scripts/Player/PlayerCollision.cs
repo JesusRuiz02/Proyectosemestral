@@ -21,13 +21,14 @@ using UnityEngine.UI;
     public ObstacleGenerator ObstacleGenerator3;
     public AudioSource NaveSound;
     public GameObject Nave;
+    public Text HighscoreText;
     
     
 
     void Start()
     {
-       
-       
+       HighscoreText.text = PlayerPrefs.GetFloat("Text-highscore", 0).ToString();
+
     }
     private void Update()
     {
@@ -58,7 +59,8 @@ using UnityEngine.UI;
             score++;
             scoreText.text = "Score: " + score;
         }
-         
+
+        
     }
 
     
@@ -79,10 +81,13 @@ using UnityEngine.UI;
             gameOverText.SetActive(true);   
             bottonReset.SetActive(true);
             bottonMenu.SetActive(true);
-            Destroy(Nave, 3);  
+            Destroy(Nave, 1f);
+            Destroy(ObstacleGenerator2);
+            Destroy(ObstacleGenerator3);
+            Destroy(obstaclegenerator);
+            Time.timeScale = 0;
             
-               
-            
+
         }
 
         
@@ -108,17 +113,24 @@ using UnityEngine.UI;
     {
         score += Time.deltaTime;
         scoreText.text = "Score: " + Math.Round(score, 0);
-        if (score >= Limitscore)
-        {
-            if (obstaclegenerator.speedspawn >= 0.5)
-            {
-                obstaclegenerator.GetDifficult();
-                ObstacleGenerator2.GetDifficult();
-                ObstacleGenerator3.GetDifficult();
-            }
+       // if (score >= Limitscore)
+       // {
+         //   if (obstaclegenerator.speedspawn >= 0.5)
+         //   {
+             //   obstaclegenerator.GetDifficult();
+              //  ObstacleGenerator2.GetDifficult();
+             //   ObstacleGenerator3.GetDifficult();
+          //  }
 
-            Limitscore = Limitscore + 10;
-        }
+          //  Limitscore = Limitscore + 10;
+          
+     //   }
+     if (score>PlayerPrefs.GetFloat("Text-Highscore",0))
+     {
+         PlayerPrefs.SetFloat("Text-highscore",score);  
+         HighscoreText.text = "Highscore: "+ score.ToString();
+     }
+
 
        
 

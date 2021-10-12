@@ -2,28 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ObstacleGenerator : MonoBehaviour
 {
     // Start is called before the first frame update
     
     public GameObject Obstacle;
-    public float speedspawn = 3f;
+    public float speedspawn =3f;
     public GameObject Enemy2;
+    public float limit = 3;
+    public  float score=0;
+    public float timer = 0;
    
 
     
     void Start()
-    {
-        RepeatEnemyBasic();
+    { 
+        //RepeatEnemyBasic();
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+        //score += Time.deltaTime;
+        GetDifficult();
 
+     
         
-
 
     }
 
@@ -31,6 +38,7 @@ public class ObstacleGenerator : MonoBehaviour
 
    public void CreateEnemy()
     {
+        Debug.Log("Se creo");
         Instantiate(Obstacle, transform.position, Quaternion.identity);
         
     }
@@ -43,6 +51,7 @@ public class ObstacleGenerator : MonoBehaviour
    public void RepeatEnemyBasic()
     {
         InvokeRepeating("CreateEnemy",0f,speedspawn);
+        
     }
 
  //  public void RepeatEnemy2()
@@ -57,15 +66,31 @@ public class ObstacleGenerator : MonoBehaviour
 
      public void GetDifficult()
     {
+        if (speedspawn>=1)
+        {
+            if (timer>=speedspawn)
+            {
+                CreateEnemy();
+                timer = 0;
+                speedspawn = speedspawn - 0.1f;
+            }
+ 
+        }
+        else
+        {
+            speedspawn = 1.1f;
+            CreateEnemy();
+        }
         
-        speedspawn = speedspawn - 0.3f;
     }
 
    
 
-    public void level1()
+    public void dead()
     {
-        
+       
+        Time.timeScale = 0;
     }
+    
 }
 

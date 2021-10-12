@@ -38,6 +38,7 @@ public class ControllerScene : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(playerSettings.IsmusicActive);
         if (playerSettings.IsmusicActive==false)
         {
             audioSource.volume=0;
