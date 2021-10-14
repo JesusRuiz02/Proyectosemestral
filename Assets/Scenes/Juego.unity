@@ -1268,7 +1268,7 @@ MonoBehaviour:
   ObstacleGenerator3: {fileID: 1125708546}
   NaveSound: {fileID: 760776675}
   Nave: {fileID: 760776666}
-  HighscoreText: {fileID: 2077962886}
+  HighscoreText: {fileID: 0}
 --- !u!70 &760776674
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
