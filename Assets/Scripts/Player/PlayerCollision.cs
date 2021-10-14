@@ -12,6 +12,7 @@ using TMPro;
 
      public Animator ac;
     public int life=3, Limitscore=10;
+    public Slider Healthslider;
     public GameObject gameOverText;
     public GameObject bottonReset;
     public GameObject bottonMenu;
@@ -50,6 +51,7 @@ using TMPro;
         if (collider.CompareTag("Obstacle"))
         {
             LostLife();
+            Healthslider.value -= life;
             collider.GetComponent<LogicaObstaculo2>();
             LogicaObstaculo2 obstaculo = collider.GetComponent<LogicaObstaculo2>();
             obstaculo.destroy();
@@ -73,9 +75,11 @@ using TMPro;
     {
             
         Debug.Log("Lost a life");
+        
         life--;
         if (life==0)
         {
+            Healthslider.value = 0;
             NaveSound = GetComponent<AudioSource>();
             ac.SetBool("DED", true);
             NaveSound.Play(0);
