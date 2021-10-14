@@ -5,6 +5,7 @@ using System.Collections.Generic;
  using UnityEngine;
 using UnityEngine.UI;
  using Object = UnityEngine.Object;
+using TMPro;
 
  public class PlayerCollision : MonoBehaviour
  {
@@ -21,7 +22,7 @@ using UnityEngine.UI;
     public ObstacleGenerator ObstacleGenerator3;
     public AudioSource NaveSound;
     public GameObject Nave;
-    public Text HighscoreText;
+    public TextMeshProUGUI HighscoreText;
     
     
 
