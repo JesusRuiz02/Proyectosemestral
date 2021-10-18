@@ -1526,6 +1526,8 @@ MonoBehaviour:
   obstaclegenerator: {fileID: 670214186}
   ObstacleGenerator2: {fileID: 1915302630}
   ObstacleGenerator3: {fileID: 1125708546}
+  ObstacleGenerator4: {fileID: 981816659}
+  ObstacleGenerator5: {fileID: 1387495810}
   NaveSound: {fileID: 760776675}
   Nave: {fileID: 760776666}
   HighscoreText: {fileID: 552210345}
@@ -2162,6 +2164,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951097782}
   m_CullTransparentMesh: 1
+--- !u!1 &981816657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981816658}
+  - component: {fileID: 981816659}
+  m_Layer: 0
+  m_Name: ObstacleGenerator4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981816658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981816657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.818564, y: 266.05704, z: -32.231205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981816659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981816657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f955ca3ca51a98459657abe7374e666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Obstacle: {fileID: 7558108300922099958, guid: bc159e060c45cff41bcd1a22d95a9b23, type: 3}
+  speedspawn: 5
+  Enemy2: {fileID: 0}
+  limit: 3
+  score: 0
+  timer: 0
 --- !u!1 &1023657747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,6 +2819,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294427001}
   m_CullTransparentMesh: 1
+--- !u!1 &1387495808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387495809}
+  - component: {fileID: 1387495810}
+  m_Layer: 0
+  m_Name: ObstacleGenerator5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1387495809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387495808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.818564, y: 266.05704, z: -32.231205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1387495810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387495808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f955ca3ca51a98459657abe7374e666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Obstacle: {fileID: 7558108300922099958, guid: bc159e060c45cff41bcd1a22d95a9b23, type: 3}
+  speedspawn: 5
+  Enemy2: {fileID: 0}
+  limit: 3
+  score: 0
+  timer: 0
 --- !u!1 &1390088013
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,6 +3061,8 @@ MonoBehaviour:
   ObstacleGenerator: {fileID: 670214185}
   ObstacleGenerator2: {fileID: 1915302629}
   ObstacleGenerator3: {fileID: 1125708545}
+  ObstacleGenerator4: {fileID: 981816657}
+  ObstacleGenerator5: {fileID: 1387495808}
   Timer: 0
   Timerlimit: 30
   Order: 0

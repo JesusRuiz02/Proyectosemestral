@@ -7,6 +7,8 @@ public class MoveTheSpawn : MonoBehaviour
     public GameObject ObstacleGenerator;
     public GameObject ObstacleGenerator2;
     public GameObject ObstacleGenerator3;
+    public GameObject ObstacleGenerator4;
+    public GameObject ObstacleGenerator5;
     public float Timer = 0;
     public float Timerlimit = 30;
     public int Order=0;
@@ -46,7 +48,9 @@ public class MoveTheSpawn : MonoBehaviour
     {
         ObstacleGenerator.transform.position=new Vector3(0,5,0);
         ObstacleGenerator2.transform.position=new Vector3(2,7,0); 
-        ObstacleGenerator3.transform.position=new Vector3(-2,9,0); 
+        ObstacleGenerator3.transform.position=new Vector3(-2,9,0);
+        ObstacleGenerator4.transform.position= new Vector3(1, 6, 0);
+        ObstacleGenerator5.transform.position = new Vector3(-1, 8, 0);
     }
 
     void Formation2()
@@ -54,6 +58,8 @@ public class MoveTheSpawn : MonoBehaviour
         ObstacleGenerator.transform.position = new Vector3(0, 7, 0);
         ObstacleGenerator2.transform.position = new Vector3(2, 9, 0);
         ObstacleGenerator3.transform.position = new Vector3(-2, 5, 0);
+        ObstacleGenerator4.transform.position= new Vector3(1, 8, 0);
+        ObstacleGenerator5.transform.position = new Vector3(-1, 6, 0);
     }
 
     void Formation3()
@@ -61,6 +67,8 @@ public class MoveTheSpawn : MonoBehaviour
         ObstacleGenerator.transform.position = new Vector3(0, 7, 0);
         ObstacleGenerator2.transform.position = new Vector3(2, 5, 0);
         ObstacleGenerator3.transform.position = new Vector3(-2, 9, 0);
+        ObstacleGenerator4.transform.position= new Vector3(1, 6, 0);
+        ObstacleGenerator5.transform.position = new Vector3(-1, 6, 0);
     }
 
     void Formation4()
@@ -68,6 +76,8 @@ public class MoveTheSpawn : MonoBehaviour
         ObstacleGenerator.transform.position = new Vector3(0, 5, 0);
         ObstacleGenerator2.transform.position = new Vector3(2, 7, 0);
         ObstacleGenerator3.transform.position = new Vector3(-2, 7, 0);
+        ObstacleGenerator4.transform.position= new Vector3(1, 6, 0);
+        ObstacleGenerator5.transform.position = new Vector3(-1, 8, 0);
     }
 
     void Random1()

@@ -22,6 +22,8 @@ using TMPro;
     public ObstacleGenerator obstaclegenerator;
     public ObstacleGenerator ObstacleGenerator2;
     public ObstacleGenerator ObstacleGenerator3;
+    public ObstacleGenerator1 ObstacleGenerator4;
+    public ObstacleGenerator1 ObstacleGenerator5;
     public AudioSource NaveSound;
     public GameObject Nave;
     public TextMeshProUGUI HighscoreText;
@@ -91,6 +93,8 @@ using TMPro;
             Destroy(Nave, 1f);
             Destroy(ObstacleGenerator2);
             Destroy(ObstacleGenerator3);
+            Destroy(ObstacleGenerator4);
+            Destroy(ObstacleGenerator5);
             Destroy(obstaclegenerator);
             
 
