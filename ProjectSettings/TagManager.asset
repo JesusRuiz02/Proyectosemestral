@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - Undefined
   - Points
+  - Obstacle2
   layers:
   - Default
   - TransparentFX

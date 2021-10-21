@@ -24,6 +24,10 @@ public class LogicaObstaculo2 : MonoBehaviour
             velocidad = velocidad + 0.1f;
             score = 0;
         }
+        if (transform.position.y<=-40)
+        {
+            destroy();  
+        }
     }
 
 
