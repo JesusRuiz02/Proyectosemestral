@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,13 @@ public class AudioManager : MonoBehaviour {
 	List<AudioSource> musicAudioSources;
 	List<AudioSource> sfxAudioSources;
 
-	private void Start() {
+
+	private void Awake()
+	{
+		DontDestroyOnLoad(this.gameObject);
+	}
+
+	public void Iniatilize() {
 
 		musicAudioSources = new List<AudioSource>();
 		sfxAudioSources = new List<AudioSource>();
@@ -42,6 +49,16 @@ public class AudioManager : MonoBehaviour {
 		}
 		return null;
 	}
+	public AudioSource GetSfxAudioSourceBy(string name) {
+		foreach(var audioSource in sfxAudioSources) {
+			if(audioSource.clip.name == name) {
+				return audioSource;
+			}
+		}
+		return null;
+	}
+	
+	
 
 	public void PlayMusicBy(string name) {
 		foreach(var musicSource in musicAudioSources) {
@@ -49,6 +66,23 @@ public class AudioManager : MonoBehaviour {
 				musicSource.Play();
 				return;
 			}
+		}
+	}
+
+	public void SetMusicVolume(float Volume)
+	{
+		foreach (var audiosource in musicAudioSources)
+		{
+			audiosource.volume = Volume;
+		}
+	}
+
+
+	public void SetSfxVolume(float Volume)
+	{
+		foreach (var audiosource in sfxAudioSources)
+		{
+			audiosource.volume = Volume;
 		}
 	}
 

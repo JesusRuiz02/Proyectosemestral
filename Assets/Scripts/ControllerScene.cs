@@ -14,7 +14,7 @@ public class ControllerScene : MonoBehaviour
 
     }
 
-    public void volumeon()
+   /* public void volumeon()
     {
         playerSettings.IsmusicActive = true;
         playerSettings.IsFxActive = true;
@@ -49,5 +49,5 @@ public class ControllerScene : MonoBehaviour
         }
         
         
-    }
+    }*/
 }

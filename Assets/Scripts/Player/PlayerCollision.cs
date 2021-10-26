@@ -27,6 +27,7 @@ using TMPro;
     public AudioSource NaveSound;
     public GameObject Nave;
     public TextMeshProUGUI HighscoreText;
+    private MainMenu mainmenu;
     
     
 
@@ -57,6 +58,7 @@ using TMPro;
             collider.GetComponent<LogicaObstaculo2>();
             LogicaObstaculo2 obstaculo = collider.GetComponent<LogicaObstaculo2>();
             obstaculo.destroy();
+            mainmenu.explosion();
             
         }
         if (collider.CompareTag("Obstacle2"))
@@ -66,6 +68,7 @@ using TMPro;
             collider.GetComponent<ObstacleLogicZigzag2>();
            ObstacleLogicZigzag2 obstaculo = collider.GetComponent<ObstacleLogicZigzag2>();
             obstaculo.destroy();
+            mainmenu.explosion();
             
         }
 
@@ -92,9 +95,7 @@ using TMPro;
         if (life==0)
         {
             Healthslider.value = 0;
-            NaveSound = GetComponent<AudioSource>();
             ac.SetBool("DED", true);
-            NaveSound.Play(0);
             Debug.Log("Perdiste");
             gameOverText.SetActive(true);   
             bottonReset.SetActive(true);

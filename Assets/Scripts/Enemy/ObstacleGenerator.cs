@@ -66,7 +66,7 @@ public class ObstacleGenerator : MonoBehaviour
 
      public void GetDifficult()
     {
-        if (speedspawn>=1)
+        if (speedspawn>=1.5)
         {
             if (timer>=speedspawn)
             {
@@ -78,7 +78,7 @@ public class ObstacleGenerator : MonoBehaviour
         }
         else
         {
-            speedspawn = 1.1f;
+            speedspawn = 1.6f;
             CreateEnemy();
         }
         

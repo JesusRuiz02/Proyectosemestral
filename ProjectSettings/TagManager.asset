@@ -8,6 +8,7 @@ TagManager:
   - Undefined
   - Points
   - Obstacle2
+  - AudioManager
   layers:
   - Default
   - TransparentFX
