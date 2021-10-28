@@ -13,16 +13,7 @@ public class MainSettings : MonoBehaviour
     void Start()
     {
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
-        audioManager.Iniatilize();
-        var mainMusic = audioManager.GetMusicAudioSourceBy("Time");
-        if (mainMusic != null)
-        {
-            mainMusic.Play();
-        }
-        else
-        {
-            Debug.LogError("No encontre el audio");
-        }
+       
     }
 
     // Update is called once per frame
@@ -43,21 +34,21 @@ public class MainSettings : MonoBehaviour
             Debug.LogError("No se encontro clip");
         }
     }
-    void Volumeon()
+   public void Volumeon()
     {
         audioManager.SetMusicVolume(1);
     }
-    void Volumeoff()
+   public void Volumeoff()
     {
         audioManager.SetMusicVolume(0);
     }
    
-    void Sfxon()
+  public  void Sfxon()
     {
         audioManager.SetSfxVolume(1);
     }
    
-    void Sfxoff()
+   public void Sfxoff()
     {
         audioManager.SetSfxVolume(0);
     }

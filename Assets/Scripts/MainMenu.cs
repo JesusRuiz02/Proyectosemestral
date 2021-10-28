@@ -55,21 +55,21 @@ public class MainMenu : MonoBehaviour
     }
    
    
-   void Volumeon()
+  public void Volumeon()
    {
        audioManager.SetMusicVolume(1);
    }
-   void Volumeoff()
+   public void Volumeoff()
    {
        audioManager.SetMusicVolume(0);
    }
    
-   void Sfxon()
+ public void Sfxon()
    {
        audioManager.SetSfxVolume(1);
    }
    
-   void Sfxoff()
+ public void Sfxoff()
    {
        audioManager.SetSfxVolume(0);
    }
