@@ -33,14 +33,12 @@ public class ObstacleGenerator1 : MonoBehaviour
        
         //score += Time.deltaTime;
         // GetDifficult();
-       // if (timer >= 10)
-       // {
-          //  score += Time.deltaTime;
-         //   if (score>=speedspawn)
-         //   {
-          //     CreateEnemy();
-          //     score = 0;
-          //  }
+        if (timer >= 60)
+       {
+          StopSpawn();
+           //  score += Time.deltaTime;
+        
+            }
 
            
      //   }
