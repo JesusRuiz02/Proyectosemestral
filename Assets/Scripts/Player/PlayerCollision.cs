@@ -58,7 +58,7 @@ using TMPro;
             collider.GetComponent<LogicaObstaculo2>();
             LogicaObstaculo2 obstaculo = collider.GetComponent<LogicaObstaculo2>();
             obstaculo.destroy();
-            mainmenu.explosion();
+            //mainmenu.explosion();
             
         }
         if (collider.CompareTag("Obstacle2"))
@@ -68,7 +68,7 @@ using TMPro;
             collider.GetComponent<ObstacleLogicZigzag2>();
            ObstacleLogicZigzag2 obstaculo = collider.GetComponent<ObstacleLogicZigzag2>();
             obstaculo.destroy();
-            mainmenu.explosion();
+          //  mainmenu.explosion();
             
         }
 

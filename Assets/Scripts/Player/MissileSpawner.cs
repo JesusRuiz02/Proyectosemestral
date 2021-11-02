@@ -20,10 +20,31 @@ public class MissileSpawner : MonoBehaviour
             if (shoot>0)
             {
                 Instantiate(shoot2, transform.position, Quaternion.identity);
+                shoot--;
             } 
         }
-       
 
-        shoot2.transform.Translate(0, 1 * Time.deltaTime * shoot, 0);
+        if (Input.touchPressureSupported)
+        {
+            if (shoot>0)
+            {
+                Instantiate(shoot2, transform.position, Quaternion.identity);
+                shoot--;
+            } 
+        }
+
+        if (transform.position.y>20)
+        {
+            Destroyshoot();
+        }
+
+        
     }
+
+    public void Destroyshoot()
+    {
+        
+        Destroy(this.gameObject);
+    }
+    
 }

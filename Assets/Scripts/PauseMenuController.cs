@@ -18,7 +18,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(Time.timeScale);
+      
     }
     public void PausaGeneral()
     {

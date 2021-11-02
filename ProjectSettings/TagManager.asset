@@ -9,6 +9,7 @@ TagManager:
   - Points
   - Obstacle2
   - AudioManager
+  - Shoot
   layers:
   - Default
   - TransparentFX

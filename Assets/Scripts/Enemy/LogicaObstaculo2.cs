@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class LogicaObstaculo2 : MonoBehaviour
 {
+    MissileSpawner missileSpawner;
 
     public float score = 3;
     public float velocidad = 4f;
@@ -30,6 +33,7 @@ public class LogicaObstaculo2 : MonoBehaviour
         }
     }
 
+  
 
     public void destroy()
     {
