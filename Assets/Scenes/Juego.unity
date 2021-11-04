@@ -1260,7 +1260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &655674618
 Transform:
   m_ObjectHideFlags: 0
@@ -1577,7 +1577,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760776666}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 686a713a62b3b7146a2361bd192b3cf4, type: 3}
@@ -1687,7 +1687,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760776666}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 090681b75de75b3408ec66e1896d1a66, type: 3}
@@ -2337,7 +2337,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1204512753}
         m_TargetAssemblyTypeName: MainSettings, Assembly-CSharp
-        m_MethodName: Volumeoff
+        m_MethodName: Sfxon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2430,7 +2430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Obstacle: {fileID: 7558108300922099958, guid: bc159e060c45cff41bcd1a22d95a9b23, type: 3}
   speedspawn: 3
-  Enemy2: {fileID: 4939219038207454004, guid: 02b2c669e06ecaf409861d820c927a7c, type: 3}
+  Enemy2: {fileID: 7785761483743781650, guid: 43887d471f316284aa0e806a9a17ec23, type: 3}
   limit: 3
   score: 0
   speedspawn2: 5
@@ -2861,6 +2861,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 0}
+  volume: 0
+  sfx: 0
 --- !u!4 &1204512754
 Transform:
   m_ObjectHideFlags: 0
@@ -3131,7 +3133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Obstacle: {fileID: 7558108300922099958, guid: bc159e060c45cff41bcd1a22d95a9b23, type: 3}
   speedspawn: 3
-  Enemy2: {fileID: 4939219038207454004, guid: 02b2c669e06ecaf409861d820c927a7c, type: 3}
+  Enemy2: {fileID: 7785761483743781650, guid: 43887d471f316284aa0e806a9a17ec23, type: 3}
   limit: 3
   score: 0
   speedspawn2: 5
@@ -3335,6 +3337,7 @@ MonoBehaviour:
   Timer: 0
   Timerlimit: 30
   Order: 0
+  yaSeMandoEvento: 0
 --- !u!82 &1416866493
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3771,7 +3774,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1204512753}
         m_TargetAssemblyTypeName: MainSettings, Assembly-CSharp
-        m_MethodName: Volumeon
+        m_MethodName: Volume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

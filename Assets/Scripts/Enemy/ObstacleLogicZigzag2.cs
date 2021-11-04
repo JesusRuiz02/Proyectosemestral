@@ -7,7 +7,7 @@ public class ObstacleLogicZigzag2 : MonoBehaviour
     public float score = 0;
     public float velocidad = 2f;
     public float frequency =2.0f; // Speed of sine movement
-    public float magnitude = 3.0f; //  Size of sine movement, its the amplitude of the side curve
+    public float magnitude = 2.0f; //  Size of sine movement, its the amplitude of the side curve
    
 
     Vector3 pos;

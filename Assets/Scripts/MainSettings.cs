@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class MainSettings : MonoBehaviour
@@ -8,6 +10,10 @@ public class MainSettings : MonoBehaviour
     private PlayerCollision playerCollision;
 
     public AudioManager audioManager;
+    private bool soundtoggle = true;
+    private bool soundtoggle2 = true;
+    public int volume;
+    public int sfx;
 
     // Start is called before the first frame update
     void Start()
@@ -34,24 +40,44 @@ public class MainSettings : MonoBehaviour
             Debug.LogError("No se encontro clip");
         }
     }
-   public void Volumeon()
-    {
-        audioManager.SetMusicVolume(1);
-    }
-   public void Volumeoff()
-    {
-        audioManager.SetMusicVolume(0);
+   public void Volume()
+   {
+       soundtoggle = !soundtoggle;
+       if (soundtoggle == true)
+       {
+           audioManager.SetMusicVolume(1);
+           Debug.Log("Volume On");
+           volume = 1;
+
+       }
+       else
+       {
+           audioManager.SetMusicVolume(0); 
+           Debug.Log("Volume Off");
+           volume = 0;
+       }
+      
     }
    
   public  void Sfxon()
     {
-        audioManager.SetSfxVolume(1);
+        soundtoggle2 = !soundtoggle2;
+        if (soundtoggle2 == true)
+        {
+            audioManager.SetSfxVolume(1);
+            Debug.Log("SfxOn");
+            sfx = 1;
+        }
+        else
+        {
+            audioManager.SetSfxVolume(0);
+            Debug.Log("sfxOff");
+            sfx = 0;
+        }
+       
+      
     }
    
-   public void Sfxoff()
-    {
-        audioManager.SetSfxVolume(0);
-    }
-
+   
 }
 

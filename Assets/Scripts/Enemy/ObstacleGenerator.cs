@@ -38,7 +38,7 @@ public class ObstacleGenerator : MonoBehaviour
 
    public void CreateEnemy()
     {
-        Debug.Log("Se creo");
+       // Debug.Log("Se creo");
         Instantiate(Obstacle, transform.position, Quaternion.identity);
         
     }

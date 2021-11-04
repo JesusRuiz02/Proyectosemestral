@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 public class ControllerScene : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class ControllerScene : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-
+        AnalyticsResult result = Analytics.CustomEvent("They start a game");
+        Debug.Log("AnalyticsResult: " + result);
     }
 
    /* public void volumeon()

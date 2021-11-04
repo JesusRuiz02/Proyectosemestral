@@ -14,8 +14,8 @@ public class AsteroidSoundC : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        CrashSound = GetComponent<AudioSource>();
-        CrashSound.Play();
+      //  CrashSound = GetComponent<AudioSource>();
+//        CrashSound.Play();
     }
 
 

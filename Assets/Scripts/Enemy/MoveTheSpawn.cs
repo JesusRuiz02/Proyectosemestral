@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Analytics;
 public class MoveTheSpawn : MonoBehaviour
 {
     public GameObject ObstacleGenerator;
@@ -12,6 +12,7 @@ public class MoveTheSpawn : MonoBehaviour
     public float Timer = 0;
     public float Timerlimit = 30;
     public int Order=0;
+    public bool yaSeMandoEvento;
     
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,11 @@ public class MoveTheSpawn : MonoBehaviour
         if (Timer>=21)
         {
             Formation4();
+           
+                if (yaSeMandoEvento == false) {
+                    Analytics.CustomEvent("Superó 21 s");
+                    yaSeMandoEvento = true;
+                }
         }
 
         if (Timer>=28)
