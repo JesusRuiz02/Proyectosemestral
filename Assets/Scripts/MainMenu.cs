@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       // audioManager.SetMusicVolume(playerSettings.isMusic);
         var audioManagerInScene = GameObject.FindGameObjectWithTag("AudioManager");
         if (audioManagerInScene!=null)
         {

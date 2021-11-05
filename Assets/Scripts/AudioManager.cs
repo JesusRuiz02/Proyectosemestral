@@ -16,6 +16,13 @@ public class AudioManager : MonoBehaviour {
 		DontDestroyOnLoad(this.gameObject);
 	}
 
+	private void Start()
+	{
+		var playerSettings = LoadSaveManager.LoadPlayerSettings();
+		//SetSfxVolume(playerSettings.IsFxActive);
+
+	}
+
 	public void Iniatilize() {
 
 		musicAudioSources = new List<AudioSource>();
