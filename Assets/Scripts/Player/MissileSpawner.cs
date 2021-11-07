@@ -21,32 +21,15 @@ public class MissileSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount>0)
-        {
-            Touch touch = Input.GetTouch(0);
-            if (shoot>0)
-            {
-                Instantiate(shoot2, transform.position, Quaternion.identity);
-                shoot--;
-            } 
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (shoot>0)
-            {
-                Instantiate(shoot2, transform.position, Quaternion.identity);
-                shoot--;
-            } 
-        }
+        bool dispara;
 
-        if (Input.touchPressureSupported)
-        {
-            if (shoot>0)
-            {
-                Instantiate(shoot2, transform.position, Quaternion.identity);
-                shoot--;
-            } 
-        }
+        dispara = Input.GetButtonDown("Fire1");
+
+        if (dispara) Shooot();
+       
+        
+
+       
 
         if (transform.position.y>20)
         {
@@ -93,6 +76,15 @@ public class MissileSpawner : MonoBehaviour
     {
         
         Destroy(this.gameObject);
+    }
+
+    public void Shooot()
+    {
+        if (shoot>0)
+        {
+            Instantiate(shoot2, transform.position, Quaternion.identity);
+            shoot--;
+        } 
     }
     
 }
