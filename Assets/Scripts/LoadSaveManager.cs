@@ -41,6 +41,10 @@ public static class LoadSaveManager
             {
                 Debug.LogError("File doesn´t exist");
             }
+            else
+            {
+                playerSettings = JsonUtility.FromJson<PlayerSettings>(file.ToString());
+            }
         }
 
         return playerSettings;

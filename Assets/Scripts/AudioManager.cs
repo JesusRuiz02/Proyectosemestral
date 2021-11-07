@@ -18,8 +18,9 @@ public class AudioManager : MonoBehaviour {
 
 	private void Start()
 	{
-		var playerSettings = LoadSaveManager.LoadPlayerSettings();
-		//SetSfxVolume(playerSettings.IsFxActive);
+		GlobalSpace.playerSettings = LoadSaveManager.LoadPlayerSettings();
+		SetMusicVolume(GlobalSpace.playerSettings.IsmusicActive);
+		SetSfxVolume(GlobalSpace.playerSettings.IsFxActive);
 
 	}
 
@@ -78,19 +79,23 @@ public class AudioManager : MonoBehaviour {
 
 	public void SetMusicVolume(float Volume)
 	{
+		GlobalSpace.playerSettings.IsmusicActive = Volume;
 		foreach (var audiosource in musicAudioSources)
 		{
 			audiosource.volume = Volume;
 		}
+		LoadSaveManager.SavedPlayerSettings(GlobalSpace.playerSettings);
 	}
 
 
 	public void SetSfxVolume(float Volume)
 	{
+		GlobalSpace.playerSettings.IsFxActive = Volume;
 		foreach (var audiosource in sfxAudioSources)
 		{
 			audiosource.volume = Volume;
 		}
+		LoadSaveManager.SavedPlayerSettings(GlobalSpace.playerSettings);
 	}
 
 	// Agregar las demás funciones

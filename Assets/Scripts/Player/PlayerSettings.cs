@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerSettings 
 {
     // Start is called before the first frame update
-    public bool IsmusicActive;
-    public bool IsFxActive;
+    public float IsmusicActive;
+    public float IsFxActive;
     
 }

@@ -45,5 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicClips:
   - {fileID: 8300000, guid: 582241c194eaab64fb2ce80d8a74bb20, type: 3}
+  - {fileID: 8300000, guid: 1971f9784c310234da48b26a017014a9, type: 3}
   sfxClips:
   - {fileID: 8300000, guid: ba59d307310f7b84d9b877773e4341a8, type: 3}

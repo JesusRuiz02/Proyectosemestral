@@ -27,19 +27,50 @@ using TMPro;
     public AudioSource NaveSound;
     public GameObject Nave;
     public TextMeshProUGUI HighscoreText;
-    private MainMenu mainmenu;
-    
+    private AudioManager audioManager;
+    public GameObject life1, life2, life3;
     
 
     void Start()
     {
        HighscoreText.text = PlayerPrefs.GetFloat("Text-highscore", 0).ToString();
-
+       audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+       life1.gameObject.SetActive(true);
+       life2.gameObject.SetActive(true);
+       life3.gameObject.SetActive(true);
     }
     private void Update()
     {
        scoretimer();
        //Debug.Log(score);
+       if (life==3)
+       {
+           life1.gameObject.SetActive(true);
+           life2.gameObject.SetActive(true);
+           life3.gameObject.SetActive(true);
+       }
+       else if (life==2)
+       {
+           life1.gameObject.SetActive(true);
+           life2.gameObject.SetActive(true);
+           life3.gameObject.SetActive(false);
+       }
+       else if (life==1)
+       {
+           life1.gameObject.SetActive(true);
+           life2.gameObject.SetActive(false);
+           life3.gameObject.SetActive(false);
+       }
+       else if (life==0)
+       {
+           life1.gameObject.SetActive(false);
+           life2.gameObject.SetActive(false);
+           life3.gameObject.SetActive(false);
+       }
+       
+       
+       
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -58,7 +89,7 @@ using TMPro;
             collider.GetComponent<LogicaObstaculo2>();
             LogicaObstaculo2 obstaculo = collider.GetComponent<LogicaObstaculo2>();
             obstaculo.destroy();
-           // mainmenu.explosion();
+           explosion();
             
         }
         if (collider.CompareTag("Obstacle2"))
@@ -68,7 +99,7 @@ using TMPro;
             collider.GetComponent<ObstacleLogicZigzag2>();
            ObstacleLogicZigzag2 obstaculo = collider.GetComponent<ObstacleLogicZigzag2>();
             obstaculo.destroy();
-         //   mainmenu.explosion();
+            explosion();
             
         }
 
@@ -157,7 +188,18 @@ using TMPro;
 
     }
 
-
+    public void explosion()
+    {
+        var explosion = audioManager.GetSfxAudioSourceBy("Meteor_Explosive_Mono_01");
+        if (explosion != null)
+        {
+            explosion.Play();
+        }
+        else
+        {
+            Debug.LogError("No se encontro clip");
+        }
+    }
     
 
     

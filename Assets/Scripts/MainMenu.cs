@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
             audioManager = Instantiate(audioManagerRef).GetComponent<AudioManager>();
             audioManager.Iniatilize();
         }
-        var mainMusic = audioManager.GetMusicAudioSourceBy("Time");
+        var mainMusic = audioManager.GetMusicAudioSourceBy("Videjuego_1_");
         if (mainMusic != null)
         {
             mainMusic.Play();
@@ -42,18 +42,7 @@ public class MainMenu : MonoBehaviour
        
     }
 
-   public void explosion()
-    {
-        var explosion = audioManager.GetSfxAudioSourceBy("Meteor_Explosive_Mono_01");
-        if (explosion != null)
-        {
-            explosion.Play();
-        }
-        else
-        {
-            Debug.LogError("No se encontro clip");
-        }
-    }
+   
    
    
   public void Volumeon()
