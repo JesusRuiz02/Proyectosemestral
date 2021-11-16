@@ -22,12 +22,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2237431164213348277}
-  - component: {fileID: 7543995706802822068}
   - component: {fileID: -7898030252698815741}
-  - component: {fileID: -8660346778139136864}
+  - component: {fileID: 6659111767208239033}
+  - component: {fileID: 171931019467698413}
   m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Miniboss
+  m_Name: Enemy 2
+  m_TagString: Miniboss2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,20 +47,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &7543995706802822068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2237431164213348278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d3137742f5998439590d645f455097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyshoot: {fileID: 7275636217889404281, guid: 68ff78cbe2fda9d4fa7d1614d4f74728, type: 3}
-  timer: 0
 --- !u!61 &-7898030252698815741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -87,7 +73,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.67636776, y: 0.6858864}
   m_EdgeRadius: 0
---- !u!50 &-8660346778139136864
+--- !u!114 &6659111767208239033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2237431164213348278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b8ca1fdbe94544ebc6adf4e2b8178d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyshoot: {fileID: 7275636217889404281, guid: 157a83bbb19804f40834ac6139dcfdf8, type: 3}
+  timer: 0
+--- !u!50 &171931019467698413
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 212522840053079996, guid: 2674c1d0c2a8930479d94ed1aba557c4, type: 3}
       propertyPath: m_SortingOrder
-      value: 23
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2674c1d0c2a8930479d94ed1aba557c4, type: 3}

@@ -10,6 +10,10 @@ TagManager:
   - Obstacle2
   - AudioManager
   - Shoot
+  - Miniboss
+  - Miniboss2
+  - Obstacle3
+  - Obstacle4
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 
-public class LogicaObstaculo2 : MonoBehaviour
+public class LogicaObstaculo3 : MonoBehaviour
 {
     MissileSpawner missileSpawner;
 

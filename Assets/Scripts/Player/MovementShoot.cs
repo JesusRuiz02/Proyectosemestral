@@ -50,9 +50,21 @@ public class MovementShoot : MonoBehaviour
             ObstacleLogicZigzag2 obstaculo = collider.GetComponent<ObstacleLogicZigzag2>();
             obstaculo.destroy();
             destroy();
-            
-
-
+        }
+        
+        if (collider.CompareTag("Miniboss"))
+        {
+            collider.GetComponent<MinibossLogic>();
+            MinibossLogic obstaculo = collider.GetComponent<MinibossLogic>();
+            obstaculo.destroy();
+            destroy();
+        }
+        if (collider.CompareTag("Miniboss2"))
+        {
+            collider.GetComponent<MinibossLogic3>();
+            MinibossLogic3 obstaculo = collider.GetComponent<MinibossLogic3>();
+            obstaculo.destroy();
+            destroy();
         }
 
     }

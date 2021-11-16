@@ -97,18 +97,45 @@ using TMPro;
             LostLife();
             Healthslider.value -= life;
             collider.GetComponent<ObstacleLogicZigzag2>();
-           ObstacleLogicZigzag2 obstaculo = collider.GetComponent<ObstacleLogicZigzag2>();
+            ObstacleLogicZigzag2 obstaculo = collider.GetComponent<ObstacleLogicZigzag2>();
             obstaculo.destroy();
             explosion();
             
         }
+        if (collider.CompareTag("Obstacle3"))
+        {
+            LostLife();
+            Healthslider.value -= life;
+            collider.GetComponent<Obstacle3>();
+            Obstacle3 obstaculo = collider.GetComponent<Obstacle3>();
+            obstaculo.destroy();
+            explosion();
+            
+        }
+        if (collider.CompareTag("Obstacle4"))
+        {
+            LostLife();
+            Healthslider.value -= life;
+            collider.GetComponent<Obstacle4>();
+            Obstacle4 obstaculo = collider.GetComponent<Obstacle4>();
+            obstaculo.destroy();
+            explosion();
+            
+        }
+        
+        
 
         if (collider.CompareTag("Points"))
         {
             scorepointbonus();
-            score++;
+            score=score+10;
             scoreText.text = "Score: " + score;
+            collider.GetComponent<LogicaObstaculo3>();
+            LogicaObstaculo3 punto = collider.GetComponent<LogicaObstaculo3>();
+            punto.destroy();
         }
+
+        
 
         
     }

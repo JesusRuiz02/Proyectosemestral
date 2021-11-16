@@ -69,6 +69,7 @@ public class MissileSpawner : MonoBehaviour
         if (timer>=10)
         {
             shoot = 3;
+            timer = 0;
         }
     }
 
