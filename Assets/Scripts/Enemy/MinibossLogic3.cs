@@ -20,7 +20,7 @@ public class MinibossLogic3 : MonoBehaviour
     {
         if (transform.position.y > 4.3)
         {
-            transform.Translate(0,1*Time.deltaTime*0.5f,0);
+            transform.Translate(0,-1*Time.deltaTime*0.5f,0);
         }
         else if (transform.position.y<4.3)
         {

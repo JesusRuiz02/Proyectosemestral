@@ -20,7 +20,7 @@ public class MinibossLogic : MonoBehaviour
     {
         if (transform.position.y > 4.3)
         {
-            transform.Translate(0,1*Time.deltaTime*0.5f,0);
+            transform.Translate(0,-1*Time.deltaTime*0.5f,0);
         }
         else if (transform.position.y<4.3)
         {
@@ -29,7 +29,7 @@ public class MinibossLogic : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        if (timer>=30)
+        if (timer>=20)
         {
             destroy();
         }
@@ -42,7 +42,7 @@ public class MinibossLogic : MonoBehaviour
 
     void repeatshoot()
     {
-        InvokeRepeating("createshoot",1.5f,2);
+        InvokeRepeating("createshoot",1.5f,3);
     }
     void movementright()
     {

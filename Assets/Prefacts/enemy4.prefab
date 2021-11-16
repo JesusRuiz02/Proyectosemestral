@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1394443985324976522}
   - component: {fileID: 154170679414762538}
   - component: {fileID: 68877556031450593}
+  - component: {fileID: 973169810247033518}
   m_Layer: 0
   m_Name: enemy4
   m_TagString: Obstacle4
@@ -95,3 +96,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa535b322cccd24ea8ecec37422408f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &973169810247033518
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275636217889404281}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.013852598, y: -0.0030950755}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.29, y: 0.29}
+    newSize: {x: 0.29, y: 0.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1254609, y: 0.23390946}
+  m_EdgeRadius: 0

@@ -13,7 +13,7 @@ public class Obstacle4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-1*Time.deltaTime*3,-1*Time.deltaTime*2,0);
+        transform.Translate(-2*Time.deltaTime,-1*Time.deltaTime*4,0);
         if (transform.position.y<=-15)
         {
             destroy();  
